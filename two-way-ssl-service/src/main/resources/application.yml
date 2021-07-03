@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: two-way-ssl-service
+---
+server:
+  port: 9002
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:two-way-ssl-ms.jks
+    key-store-password: two-way-ssl-ms
+    key-alias: two-way-ssl-ms
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:two-way-ssl-ms.jks
+    trust-store-password: two-way-ssl-ms
+    trust-store-type: JKS
