@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: two-way-ssl-gateway
+---
+server:
+  port: 9001
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:two-way-ssl-gateway.jks
+    key-store-password: rajivderas
+    key-alias: two-way-ssl-gateway
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:two-way-ssl-gateway.jks
+    trust-store-password: rajivderas
+    trust-store-type: JKS
+---
+endpoint:
+  two-way-ssl-service: https://localhost:9002/two-way-ssl-service/data
