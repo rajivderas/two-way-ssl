@@ -2,6 +2,10 @@ spring:
   application:
     name: two-way-ssl-gateway
 ---
+springdoc:
+  api-docs:
+    path: /2waysslgw-docs
+---
 server:
   port: 9001
   ssl:

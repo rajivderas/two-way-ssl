@@ -2,6 +2,10 @@ spring:
   application:
     name: two-way-ssl-service
 ---
+springdoc:
+  api-docs:
+    path: /2waysslms-docs
+---
 server:
   port: 9002
   ssl:

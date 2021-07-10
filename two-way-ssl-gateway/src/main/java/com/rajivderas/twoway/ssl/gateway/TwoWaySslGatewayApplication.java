@@ -1,5 +1,7 @@
 package com.rajivderas.twoway.ssl.gateway;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.apache.http.client.HttpClient;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -17,6 +19,7 @@ import java.io.InputStream;
 import java.security.KeyStore;
 
 @SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "Two Way SSL Gateway API", version = "1.0.0"))
 public class TwoWaySslGatewayApplication {
 
     public static void main(String[] args) {
